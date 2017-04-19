@@ -1,1 +1,40 @@
-{     "devDependencies": {         "grunt-image-resize": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-grunt-image-resize",     "homepage": "https://github.com/npmtest/node-npmtest-grunt-image-resize",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-grunt-image-resize.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### test coverage for  [grunt-image-resize (v1.0.0)](https://github.com/excellenteasy/grunt-image-resize)  [![npm package](https://img.shields.io/npm/v/npmtest-grunt-image-resize.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-grunt-image-resize) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-grunt-image-resize.svg)](https://travis-ci.org/npmtest/node-npmtest-grunt-image-resize)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "grunt-image-resize": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-grunt-image-resize",
+    "keywords": [
+        "coverage",
+        "test",
+        "grunt-image-resize"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_grunt_image_resize.js",
+    "name": "npmtest-grunt-image-resize",
+    "nameAlias": "npmtest_grunt_image_resize",
+    "nameOriginal": "npmtest-grunt-image-resize",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-grunt-image-resize.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
